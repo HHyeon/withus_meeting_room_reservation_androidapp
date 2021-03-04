@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".StatusPreviewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- temporary deprecated -->
+        <LinearLayout
+            android:visibility="gone"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="부재, 자리비움 현황"
+                android:layout_margin="12dp"
+                />
+            <TextView
+                android:id="@+id/tv_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <!-- temporary deprecated -->
+        <ListView
+            android:visibility="gone"
+
+            android:id="@+id/List_peoplestatus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:background="@drawable/outline"
+            android:layout_margin="5dp"
+            android:padding="1dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            />
+
+
+
+
+
+        <TextView
+            android:id="@+id/tv_statusbymonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_margin="6dp"
+            />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:compactCalendarTextSize="12sp"
+            app:compactCalendarCurrentDayBackgroundColor="#99FFCC"
+
+            />
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_margin="12dp"
+            android:text="금일 회의실 현황"
+            />
+
+        <TextView
+            android:id="@+id/tv_count2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+        <ListView
+            android:id="@+id/List_meetingroomstatus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:background="@drawable/outline"
+            android:layout_margin="5dp"
+            android:padding="1dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            />
+    </LinearLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".SchedAddActivity">
+
+    <Button
+        android:onClick="SchedonClickQuit"
+        android:id="@+id/BTNApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/schedactivity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/schedActivityTitle"
+        android:textSize="32sp"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/NameinputPanel"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/schedactivity_title"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="18sp"-->
+            <!--android:text="이름 "/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/Edit_name"-->
+            <!--android:layout_width="180dp"-->
+            <!--android:inputType="text"-->
+            <!--android:hint="이름을 입력하세요"-->
+            <!--android:singleLine="true"-->
+            <!--android:layout_height="wrap_content"  />-->
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/PanelReasonSelect"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/schedactivity_title" >
+
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="사유"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_toRightOf="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_outwork"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="외근" />
+
+            <RadioButton
+                android:id="@+id/radio_vacation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="휴가" />
+
+            <RadioButton
+                android:id="@+id/radio_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기타" />
+
+        </RadioGroup>
+
+
+        <EditText
+            android:layout_toRightOf="@+id/radiogroup"
+            android:hint="기타 사유"
+            android:id="@+id/Edit_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+    <GridLayout
+        app:layout_constraintTop_toBottomOf="@id/PanelReasonSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:layout_marginTop="10dp"
+        android:columnCount="2"
+        android:rowCount="3" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:text="시작"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:gravity="center"
+            android:text="복귀"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/Edit_DateFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:hint="시작 날짜"
+            android:gravity="center"
+            android:inputType="none"
+            />
+        <EditText
+            android:id="@+id/Edit_DateUntil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:hint="복귀 날짜"
+            android:gravity="center"
+            android:inputType="none"
+            />
+
+        <EditText
+            android:id="@+id/Edit_TimeFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:hint="시작 시간"
+            android:gravity="center"
+            android:inputType="none"
+            />
+        <EditText
+            android:id="@+id/Edit_TimeUntil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:hint="복귀 시간"
+            android:gravity="center"
+            android:inputType="none"
+            />
+
+
+    </GridLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
